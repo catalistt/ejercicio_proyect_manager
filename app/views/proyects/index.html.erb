@@ -1,7 +1,7 @@
 <h1> Dashboard proyectos </h1>
 <%= form_tag proyects_index_path, method: :get do %>
   <%= select_tag(:search, options_for_select(['propuesta', 'progreso', 'terminado'])) %>
-  <p><%= submit_tag 'Filtrar'%></p>
+  <p><%= submit_tag 'Filtrar' %> </p>
 <% end %>
 
 <table class="table table-secondary">
