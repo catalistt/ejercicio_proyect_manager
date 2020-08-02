@@ -1,6 +1,7 @@
 class ProyectsController < ApplicationController
 
-  
+    http_basic_authenticate_with name: "desafiovamoscontodo", password: "XAHTJEAS23123%23", except: :index
+
   def new
     @proyect = Proyect.new
   end
