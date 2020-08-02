@@ -1,11 +1,12 @@
-<h1>Proyects#new</h1>
+<h1>¡Agrega un nuevo proyecto!</h1>
 <%= form_with model: @proyect, url: proyects_create_path do |f| %>
-	<%= f.text_field :name %>
-	<%= f.text_field :description %>
-  <%= f.date_field :start_date %>
-  <%= f.date_field :end_date %>
+	<p>Nombre  <%= f.text_field :name %></p>
+	<p>Descripción  <%= f.text_field :description %></p>
+  <p>Fecha de inicio  <%= f.date_field :start_date %></p>
+  <p>Fecha de término  <%= f.date_field :end_date %></p>
+  <p>Estado  <%= f.select(:status, ['propuesta', 'progreso', 'terminado']) %></p>
   <%= f.submit 'Guardar' %>
-  <%= f.select(:status, ['propuesta', 'progreso', 'terminado']) %>
-  <% f.submit 'Guardad' %> 
-
 <% end %>
+<br>
+<br> 
+<p>Apretar <%= link_to 'aquí', proyects_index_path %> para ir al dashboard</p>

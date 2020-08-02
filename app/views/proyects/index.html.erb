@@ -1,11 +1,11 @@
-<h1> Index </h1>
+<h1> Dashboard proyectos </h1>
 <%= form_tag proyects_index_path, method: :get do %>
   <%= select_tag(:search, options_for_select(['propuesta', 'progreso', 'terminado'])) %>
-  <%= submit_tag 'Filtrar'%>
+  <p><%= submit_tag 'Filtrar'%></p>
 <% end %>
 
-<table class="table">
-  <thead>
+<table class="table table-secondary">
+  <thead class="thead-dark">
     <tr>
       <th>Nombre</th>
       <th>Descripción</th>
